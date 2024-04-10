@@ -1,1 +1,3 @@
-# webshop-projekt
+# Webshop Projekt
+
+![image](https://cdn.discordapp.com/attachments/1148616051127484496/1227552115015024690/IMG_20240408_125612.jpg?ex=6628d1ff&is=66165cff&hm=87c1b23c508132b15e7c60bbaabde0ed3c419787ae0c875151e635c11776b4c8&)
