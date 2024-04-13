@@ -8,6 +8,7 @@ import {
 } from 'react-router-dom'
 import ShopLayout from './Pages/Shop/ShopLayout.tsx'
 import Shop from './Pages/Shop/Shop.tsx'
+import CategoryLayout from './Pages/Shop/Pages/CategoryLayout.tsx'
 
 const router = createBrowserRouter([
   {
@@ -19,9 +20,12 @@ const router = createBrowserRouter([
     element: <ShopLayout />,
     children: [
       {
-        path: '/shop/',
         index: true,
         element: <Shop />
+      },
+      {
+        path: '/shop/:category',
+        element: <CategoryLayout />,
       }
     ]
   }

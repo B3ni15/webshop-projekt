@@ -7,27 +7,70 @@ const Header = () => {
 
   const data = [
     {
-      title: "Röplabda",
-      url: "/volleyball",
-    },
-    {
-      title: "Foci",
+      title: 'Csapatsportok',
       children: [
         {
-          title: "Europa",
-          url: "/football/europa",
+          title: 'Röplabda',
+          url: '/shop/volleyball'
         },
         {
-          title: "America",
-          url: "/football/america",
+          title: 'Kosárlabda',
+          url: '/shop/basketball'
         },
         {
-          title: "Asia",
-          url: "/football/asia",
+          title: 'Kézilabda',
+          url: '/shop/handball'
         },
         {
-          title: "Africa",
-          url: "/football/africa",
+          title: 'Football',
+          children: [
+            {
+              title: 'Európa',
+              url: '/shop/football/europe'
+            },
+            {
+              title: 'Amerika',
+              url: '/shop/football/america'
+            }
+          ]
+        }
+      ]
+    },
+    {
+      title: 'Ütőssportok',
+      children: [
+        {
+          title: 'Golf',
+          url: '/shop/golf'
+        },
+        {
+          title: 'Baseball',
+          url: '/shop/baseball'
+        }, 
+        {
+          title: 'Tenis',
+          url: '/shop/tenis'
+        },
+        {
+          title: 'Squash',
+          url: '/shop/squash'
+        },
+        {
+          title: 'Pingpong',
+          url: '/shop/pingpong'
+        },
+        {
+          title: 'Krikett',
+          url: '/shop/krikett'
+        }
+      ]
+    },
+    {
+      title: 'Egyéb',
+      children: [
+        {
+          title: 'Petanque',
+          url: '/shop/petanque'
         }
       ]
     }

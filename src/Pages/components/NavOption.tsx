@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import NavChildren from './NavChildren'
+import NavDropdown from './NavDropdown'
 
 interface NavOptionProps {
     title: string
@@ -15,17 +15,15 @@ interface NavChildren {
 
 const NavOption: FC<NavOptionProps> = ({
     title,
-    children,
-    url
+    children
 }) => {
     const [open, setOpen] = React.useState(false)
+
     return (
-        <div className='flex gap-2 relative'>
+        <div className='flex relative cursor-pointer'>
             <p className='text-white' onClick={() => setOpen(!open)}>{title}</p>
 
-            {open && children && children.map((child, index) => (
-                <NavChildren key={index} {...child} position={String(index * 20)} />
-            ))}
+            <NavDropdown open={open} children={children as NavChildren[]} setOpen={setOpen} />
         </div>
     )
 }
