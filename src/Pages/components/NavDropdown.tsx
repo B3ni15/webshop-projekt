@@ -28,7 +28,7 @@ const NavDropdown: FC<NavDropdownProps> = ({
             {
                 open && (
                     <ClickAwayListener onClickAway={() => setOpen(false)}>
-                        <div className='flex flex-col gap-1 bg-black/70 rounded-md p-2 absolute top-[120%] left-1/2 translate-x-[-50%] h-fit max-w-[250px] w-full backdrop-blur-md' style={{
+                        <div className='flex flex-col gap-1 bg-black/70 rounded-md p-2 absolute top-[120%] left-1/2 translate-x-[-50%] h-fit max-w-[250px] w-full backdrop-blur-md z-10' style={{
                             backgroundColor: isSub ? 'transparent' : '',
                             position: isSub ? 'relative' : 'absolute',
                         }}>

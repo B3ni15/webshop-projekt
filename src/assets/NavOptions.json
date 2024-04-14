@@ -1,0 +1,70 @@
+[
+    {
+      "title": "Csapatsportok",
+      "children": [
+        {
+          "title": "Röplabda",
+          "url": "/shop/volleyball"
+        },
+        {
+          "title": "Kosárlabda",
+          "url": "/shop/basketball"
+        },
+        {
+          "title": "Kézilabda",
+          "url": "/shop/handball"
+        },
+        {
+          "title": "Football",
+          "children": [
+            {
+              "title": "Európa",
+              "url": "/shop/football?sub=europe"
+            },
+            {
+              "title": "Amerika",
+              "url": "/shop/football?sub=america"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Ütőssportok",
+      "children": [
+        {
+          "title": "Golf",
+          "url": "/shop/golf"
+        },
+        {
+          "title": "Baseball",
+          "url": "/shop/baseball"
+        }, 
+        {
+          "title": "Tenis",
+          "url": "/shop/tenis"
+        },
+        {
+          "title": "Squash",
+          "url": "/shop/squash"
+        },
+        {
+          "title": "Pingpong",
+          "url": "/shop/pingpong"
+        },
+        {
+          "title": "Krikett",
+          "url": "/shop/krikett"
+        }
+      ]
+    },
+    {
+      "title": "Egyéb",
+      "children": [
+        {
+          "title": "Petanque",
+          "url": "/shop/petanque"
+        }
+      ]
+    }
+  ]

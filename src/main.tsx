@@ -9,6 +9,7 @@ import {
 import ShopLayout from './Pages/Shop/ShopLayout.tsx'
 import Shop from './Pages/Shop/Shop.tsx'
 import CategoryLayout from './Pages/Shop/Pages/CategoryLayout.tsx'
+import Login from './Pages/Login/login.tsx'
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
         element: <CategoryLayout />,
       }
     ]
+  },
+  {
+    path: '/login',
+    element: <Login />,
   }
 ])
 
