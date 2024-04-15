@@ -1,0 +1,80 @@
+[
+    {
+        "title": "Röplabda",
+        "price": 1000,
+        "image": "/vallyball.png",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus"
+    }, 
+    {
+        "title": "Kosárlabda",
+        "price": 2000,
+        "image": "/basketbell.png",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus"
+    },
+    {
+        "title": "Foci - Amerikai",
+        "price": 3000,
+        "image": "/americanfootball.png",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus"
+    },
+    {
+        "title": "Foci - Európai",
+        "price": 3000,
+        "image": "/soccer.png",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus"
+    },
+    {
+        "title": "Tenisz",
+        "price": 4000,
+        "image": "/tennis.png",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus"
+    },
+    {
+        "title": "Ping-pong",
+        "price": 5000,
+        "image": "/pingpong.png",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus"
+    },
+    {
+        "title": "Baseball",
+        "price": 6000,
+        "image": "/baseball.png",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus"
+    }, 
+    {
+        "title": "Bowling",
+        "price": 7000,
+        "image": "/bowling.png",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus"
+    },
+    {
+        "title": "Krikett",
+        "price": 8000,
+        "image": "/cricket.png",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus"
+    },
+    {
+        "title": "Golf",
+        "price": 9000,
+        "image": "/golf.png",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus"
+    },
+    {
+        "title": "Kézilabda",
+        "price": 10000,
+        "image": "/handball.png",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus"
+    }, 
+    {
+        "title": "Petanque",
+        "price": 11000,
+        "image": "/petanque.png",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus"
+    }, 
+    {
+        "title": "Squash",
+        "price": 12000,
+        "image": "/sqash.webp",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus"
+    }
+]

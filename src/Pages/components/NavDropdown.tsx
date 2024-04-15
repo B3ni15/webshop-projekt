@@ -28,9 +28,10 @@ const NavDropdown: FC<NavDropdownProps> = ({
             {
                 open && (
                     <ClickAwayListener onClickAway={() => setOpen(false)}>
-                        <div className='flex flex-col gap-1 bg-black/70 rounded-md p-2 absolute top-[120%] left-1/2 translate-x-[-50%] h-fit max-w-[250px] w-full backdrop-blur-md z-10' style={{
+                        <div className='flex flex-col gap-1 bg-black/70 rounded-md p-2 absolute top-[120%] left-1/2 translate-x-[-50%] h-fit w-fit backdrop-blur-md z-10 max-md:!relative max-md:!top-0 max-md:!left-0 max-md:!translate-x-0 max-md:!w-full' style={{
                             backgroundColor: isSub ? 'transparent' : '',
                             position: isSub ? 'relative' : 'absolute',
+                            backdropFilter: isSub ? 'none' : '',
                         }}>
                             {
                                 children.map((item, index) => {
@@ -64,7 +65,7 @@ const NavDropdown: FC<NavDropdownProps> = ({
                                         )
                                     } else {
                                         return (
-                                            <Link key={index} to={item.url as string} className='text-white hover:text-gray-300'>
+                                            <Link key={index} to={item.url as string} className='text-white hover:text-gray-300 whitespace-nowrap'>
                                                 {item.title}
                                             </Link>
                                         )

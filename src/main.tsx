@@ -10,6 +10,7 @@ import ShopLayout from './Pages/Shop/ShopLayout.tsx'
 import Shop from './Pages/Shop/Shop.tsx'
 import CategoryLayout from './Pages/Shop/Pages/CategoryLayout.tsx'
 import Login from './Pages/Login/login.tsx'
+import Cart from './Pages/Shop/Pages/Cart.tsx'
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: '/shop/:category',
         element: <CategoryLayout />,
+      },
+      {
+        path: '/shop/cart',
+        element: <Cart />,
       }
     ]
   },
