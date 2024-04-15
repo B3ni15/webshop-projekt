@@ -38,7 +38,7 @@ const Card: FC<CardProps> = ({
             </div>
 
             <div className="flex items-center gap-2 w-full max-lg:flex-col">
-            <button type='button' className='bg-blue-500 rounded-md p-2 px-2 w-1/2 max-lg:w-full' onClick={handleBuy}>Megveszem</button>
+            <button type='button' className='bg-blue-500 rounded-md p-2 px-2 w-1/2 max-lg:w-full' onClick={() => handleBuy()}>Megveszem</button>
                 <a href={`https://www.google.com/search?q=${title}`} target="__blank" className='bg-blue-500 rounded-md p-2 px-2 w-1/2 whitespace-nowrap text-center max-lg:w-full'>
                     További Információ
                 </a>

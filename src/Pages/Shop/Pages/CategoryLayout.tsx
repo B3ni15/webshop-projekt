@@ -1,4 +1,4 @@
-import { Outlet, useLocation, useSearchParams } from 'react-router-dom'
+import { useLocation, useSearchParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import data from '../../../assets/NavOptions.json'
 import CardData from '../../../assets/CardData.json'
