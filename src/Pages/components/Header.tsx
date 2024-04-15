@@ -4,7 +4,7 @@ import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
 import data from '../../assets/NavOptions.json'
 import { useEffect, useState } from 'react'
-import { getCookie } from '../../utils' 
+import { getCookie } from '../../utils'
 
 interface User {
   id: string
@@ -67,10 +67,14 @@ const Header = () => {
 
   return (
     <header className={`w-full h-16 bg-white/5 fixed top z-10 backdrop-blur-md flex items-center justify-between p-7 max-md:flex-col max-md:p-2 ${open ? 'h-[400px] !justify-start' : ''} transition-all`}>
-      <img src="/rect24.png" alt="" className='w-14 h-12 aspect-square max-md:hidden' />
+      <a href="/">
+        <img src="/rect24.png" alt="" className='w-14 h-12 aspect-square max-md:hidden' />
+      </a>
 
       <div className="hidden max-md:flex justify-between w-full items-center">
-        <img src="/rect24.png" alt="" className='w-14 h-12 aspect-square' />
+        <a href="/">
+          <img src="/rect24.png" alt="" className='w-14 h-12 aspect-square' />
+        </a>
         <div className="hidden flex-col gap-1 max-w-[30px] bg-black w-full py-2 px-1 rounded-md max-md:flex h-fit" onClick={() => setOpen(!open)}>
           <div className="bg-white h-1 rounded-md"></div>
           <div className="bg-white h-1 rounded-md"></div>
@@ -87,15 +91,17 @@ const Header = () => {
       <div className={`flex items-center gap-7 max-md:hidden ${open ? '!flex mt-auto' : ''}`}>
         <div className="flex items-center gap-3 ">
           {
-            !isLoaded && (
-              <p>Loading...</p>
+            !isLoaded && loggedIn && (
+              <div className="animate-pulse flex items-center gap-3">
+                <div className='w-10 h-10 bg-gray-300 rounded-full'></div>
+                <p>Betöltés...</p>
+              </div>
             )
           }
-
           {
             loggedIn && isLoaded && (
               <>
-              <img className="w-10 h-10 rounded-full" src={`https://cdn.discordapp.com/avatars/${user!.id}/${user!.avatar}.png`} alt="profilpic" />
+                <img className="w-10 h-10 rounded-full" src={`https://cdn.discordapp.com/avatars/${user!.id}/${user!.avatar}.png`} alt="profilpic" />
                 <p>{user!.username}</p>
               </>
             )
@@ -103,8 +109,9 @@ const Header = () => {
 
           {
             !loggedIn && (
-              <Link to="/login">
-                <button className="text-white bg-transparent border border-white px-3 py-1 rounded-lg">Login</button>
+              <Link to="/login" className="flex gap-2 items-center justify-center p-2 px-6 rounded-full from-[#0085FF] to-[#000699] bg-gradient-to-r text-white">
+                <img src="/kisicon.png" alt="Kisicon" className='w-6' />
+                <p className='font-bold'> Bejelentkezés</p>
               </Link>
             )
           }
