@@ -14,7 +14,6 @@ const login = () => {
         }
 
         async function getToken(code: string) {
-            // Set to no-cors to avoid CORS error
             const response = await fetch(`http://213.136.90.151:2333/api/auth/callback?code=${code}`, {
                 method: 'GET',
                 headers: {
@@ -34,7 +33,6 @@ const login = () => {
 
             console.log(res.data)
 
-            // Add 7 days to the current date
             const expires = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toUTCString()
 
             document.cookie = `token=${res.data.access_token}; expires=${expires}; path=/`
