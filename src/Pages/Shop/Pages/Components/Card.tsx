@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC, useRef, useState } from 'react'
 
 interface CardProps {
     title: string
@@ -13,6 +13,9 @@ const Card: FC<CardProps> = ({
     image,
     description
 }) => {
+    const [bought, setBought] = useState(false)
+    const musicRef = useRef<HTMLAudioElement>(null)
+
     const handleBuy = () => {
         // add the item to local storage if the item is not already in the cart
         // if the item is already in the cart, increase the quantity of the item
@@ -24,8 +27,25 @@ const Card: FC<CardProps> = ({
         if (item) {
             item.quantity += 1
         } else {
-            items.push({ title, price, quantity: 1 })
+            items.push({ title, price, quantity: 1, image: image })
         }
+
+        localStorage.setItem('cart', JSON.stringify(items))
+
+        setBought(true)
+        if (musicRef.current) {
+            musicRef.current.volume = 0.2
+            musicRef.current.play()
+        }
+
+        setTimeout(() => {
+            setBought(false)
+
+            if (musicRef.current) {
+                musicRef.current.pause()
+                musicRef.current.currentTime = 0
+            }
+        }, 2000)
     }
 
     return (
@@ -38,8 +58,14 @@ const Card: FC<CardProps> = ({
             </div>
 
             <div className="flex items-center gap-2 w-full max-lg:flex-col">
-            <button type='button' className='bg-blue-500 rounded-md p-2 px-2 w-1/2 max-lg:w-full' onClick={() => handleBuy()}>Megveszem</button>
-                <a href={`https://www.google.com/search?q=${title}`} target="__blank" className='bg-blue-500 rounded-md p-2 px-2 w-1/2 whitespace-nowrap text-center max-lg:w-full'>
+                <button type='button' className='bg-blue-500 rounded-md p-2 px-2 w-1/2 max-lg:w-full hover:bg-blue-400 transition-colors' onClick={() => handleBuy()}>
+                    {
+                        bought ? '✅' : 'Megveszem'
+                    }
+
+                    <audio ref={musicRef} src="/sound.mp3" />
+                </button>
+                <a href={`https://www.google.com/search?q=${title}`} target="__blank" className='bg-blue-500 rounded-md p-2 px-2 w-1/2 whitespace-nowrap text-center max-lg:w-full hover:bg-blue-400 transition-colors'>
                     További Információ
                 </a>
             </div>

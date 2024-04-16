@@ -20,8 +20,8 @@ const NavOption: FC<NavOptionProps> = ({
     const [open, setOpen] = React.useState(false)
 
     return (
-        <div className='flex relative cursor-pointer max-md:flex-col max-md:w-full max-md:items-center max-md:gap-2'>
-            <p className='text-white' onClick={() => setOpen(!open)}>{title}</p>
+        <div className='flex relative cursor-pointer max-md:flex-col max-md:w-full max-md:items-center max-md:gap-2 group'>
+            <p className='text-white group-hover:scale-105 transition-all' onClick={() => setOpen(!open)}>{title}</p>
 
             <NavDropdown open={open} children={children as NavChildren[]} setOpen={setOpen} />
         </div>
