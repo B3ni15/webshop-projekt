@@ -67,12 +67,12 @@ const Header = () => {
 
   return (
     <header className={`w-full h-16 bg-white/5 fixed top z-10 backdrop-blur-md flex items-center justify-between p-7 max-md:flex-col max-md:p-2 ${open ? 'h-[400px] !justify-start' : ''} transition-all`}>
-      <a href="/">
+      <a href="/shop">
         <img src="/rect24.png" alt="" className='w-14 h-12 aspect-square max-md:hidden' />
       </a>
 
       <div className="hidden max-md:flex justify-between w-full items-center">
-        <a href="/">
+        <a href="/shop">
           <img src="/rect24.png" alt="" className='w-14 h-12 aspect-square' />
         </a>
         <div className="hidden flex-col gap-1 max-w-[30px] bg-black w-full py-2 px-1 rounded-md max-md:flex h-fit" onClick={() => setOpen(!open)}>

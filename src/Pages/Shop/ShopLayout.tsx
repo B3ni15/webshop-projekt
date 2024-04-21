@@ -1,5 +1,6 @@
 import Header from '../components/Header'
 import { Outlet } from 'react-router-dom'
+import Footer from '../components/Footer'
 
 const ShopLayout = () => {
   return (
@@ -9,6 +10,8 @@ const ShopLayout = () => {
         <main className="mt-[64px] p-2">
           <Outlet/>
         </main>
+
+        <Footer />
     </main>
   )
 }

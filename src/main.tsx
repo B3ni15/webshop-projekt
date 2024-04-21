@@ -15,7 +15,7 @@ import Cart from './Pages/Shop/Pages/Cart.tsx'
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />,
+    element: <Shop />,
   },
   {
     path: '/shop',
