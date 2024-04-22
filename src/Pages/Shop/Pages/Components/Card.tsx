@@ -17,9 +17,6 @@ const Card: FC<CardProps> = ({
     const musicRef = useRef<HTMLAudioElement>(null)
 
     const handleBuy = () => {
-        // add the item to local storage if the item is not already in the cart
-        // if the item is already in the cart, increase the quantity of the item
-
         const items = JSON.parse(localStorage.getItem('cart') || '[]')
 
         const item = items.find((item: any) => item.title === title)
