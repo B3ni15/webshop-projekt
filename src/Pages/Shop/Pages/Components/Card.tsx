@@ -63,7 +63,7 @@ const Card: FC<CardProps> = ({
                     <audio ref={musicRef} src="/sound.mp3" />
                 </button>
                 <a href={`https://www.google.com/search?q=${title}`} target="__blank" className='bg-blue-500 rounded-md p-2 px-2 w-1/2 whitespace-nowrap text-center max-lg:w-full hover:bg-blue-400 transition-colors'>
-                    További Információ
+                    Információ
                 </a>
             </div>
         </div>
