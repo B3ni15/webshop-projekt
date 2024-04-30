@@ -49,8 +49,9 @@ const Card: FC<CardProps> = ({
     // Megcsinálni hogy amit megcsináltunk.
 
     return (
-        <div className={`w-fit h-fit rounded-md bg-white/5 flex p-2 gap-5 place-self-center items-center flex-col`}>
-            <img src={image} alt={title} className='w-[200px] h-[200px] object-cover rounded-md' />
+        <div className={`w-fit h-fit rounded-md bg-white/5 flex p-2 gap-5 place-self-center items-center flex-col max-md:flex-row`}>
+            <img src={image} alt={title} className='w-[200px] h-[200px] object-cover rounded-md max-md:w-[100px] max-md:h-[100px]' />
+
             <div className="self-start">
                 <h1 className='text-xl font-semibold text-white'>{title}</h1>
                 <p className='text-sm text-white'>{description}</p>
